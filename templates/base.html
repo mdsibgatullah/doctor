@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    {% block title %}
+    {% endblock title %}
+
+    {% block css_file %}
+        {% include "testapp/css.html" %}
+    {% endblock css_file %}
+</head>
+<body>
+    {% block content %}
+    
+    {% endblock content %}
+
+    
+    {% block js_file %}
+        {% include "testapp/js.html" %}
+    {% endblock js_file %}
+</body>
+</html>

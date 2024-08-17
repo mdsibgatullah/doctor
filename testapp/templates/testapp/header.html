@@ -1,0 +1,52 @@
+{% load static %}
+    <header class="header-area">
+        <div class="container">
+            <div class="paint-nav">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="#"><img src="{% static 'testapp/assets/images/logo.png' %}" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav hp-1-nav ml-auto mt-2">
+
+                            <li class="nav-item">
+                                <a href="{% url 'home' %}" class="nav-link mest" data-toggle="modal" data-target="">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="{% url 'service' %}" class="nav-link mest" data-toggle="modal" data-target="">Service</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="{% url 'about-us' %}" class="nav-link mest" data-toggle="modal" data-target="">About</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="{% url 'contact-us' %}" class="nav-link mest" data-toggle="modal" data-target="">Contact</a>
+                            </li>
+
+                            <li class="nav-item  dropdown">
+                                <a href="{% url 'portfolio' %}" class="nav-link" id="dropdown2" data-toggle="dropdown">Pages</a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdown1-1">
+                                    <li class="dropdown-item"><a href="{% url 'portfolio' %}">Portfolio</a></li>
+                                    <li class="dropdown-item"><a href="{% url 'team' %}">Team</a></li>
+                                    <li class="dropdown-item"><a href="{% url 'blog-main' %}">Blog Main</a></li>
+                                    <li class="dropdown-item"><a href="{% url 'blog-details' %}">Blog Details</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link mest" data-toggle="modal" data-target="">Estimate</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link last-child" href="tel:+4487788589(99)">Call : +44 8778 8589
+                                    (99)</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>

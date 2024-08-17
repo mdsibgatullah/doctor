@@ -1,0 +1,357 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    <title>Home | Post</title>
+{% endblock title %}
+
+{% block content %}
+    {% include "testapp/preloader.html" %}
+    {% include "testapp/header.html" %}
+
+    <div class="modal animated fadeIn" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content e-m-contents">
+                <div class="modal-body">
+                    <button type="button" class="close es-close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="card estimate-card es-card-2">
+                        <span class="flaticon-paint esc-paint"></span>
+                        <h2>Get An Estimate</h2>
+                        <article class="card-body">
+                            <form>
+                                <span class="e-ctl"> 1. What are the wall dimensions?</span>
+                                <div class="form-row pt-2">
+                                    <div class="col form-group">
+                                        <label>Height (m) </label>
+                                        <input type="text" class="form-control" placeholder="0.00" id="wd-height" required>
+                                    </div>
+                                    <div class="col form-group">
+                                        <label>Width (m)</label>
+                                        <input type="text" class="form-control" placeholder="0.00" id="wd-width" required>
+                                    </div>
+                                </div>
+                                <span class="e-ctl">2. What are the dimensions of the windows/areas
+                                    that you don't want to cover in metres?</span>
+                                <div class="form-row pt-2">
+                                    <div class="form-group col">
+                                        <label>Height (m)</label>
+                                        <input type="text" class="form-control" placeholder="0.00" id="wnd-height" value="00.00">
+                                    </div>
+                                    <div class="form-group col">
+                                        <label>Width (m)</label>
+                                        <input type="text" class="form-control" placeholder="0.00" id="wnd-width" value="00.00">
+                                    </div>
+                                </div>
+                                <span class="e-ctl">3. What are the dimensions of the doors
+                                    that you don't want to cover in metres?</span>
+                                <div class="form-row pt-2">
+                                    <div class="form-group col">
+                                        <label>Height (m)</label>
+                                        <input type="text" class="form-control" placeholder="0" id="doord-height" value="00.00">
+                                    </div>
+                                    <div class="form-group col">
+                                        <label>Width (m)</label>
+                                        <input type="text" class="form-control" placeholder="0" id="doord-width" value="00.00">
+                                    </div>
+                                </div>
+                                <span class="e-ctl">4. How many coats of paint do you want?</span>
+                                <div class="form-group p-2">
+                                    <label class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="coat-qty-check" value="1" checked>
+                                        <span class="form-check-label"> 1 coat</span>
+                                    </label>
+                                    <label class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="coat-qty-check" value="2">
+                                        <span class="form-check-label"> 2 coat</span>
+                                    </label>
+                                    <label class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="coat-qty-check" value="3">
+                                        <span class="form-check-label"> 3 coat</span>
+                                    </label>
+                                </div>
+                                <div class="e-result">
+                                    <div class="e-tottle me-tottle">
+                                        <h3 id="litre-result">00.00</h3>
+                                        <span>litres of paint</span>
+                                    </div>
+                                    <div class="er-text">
+                                        <p>This is based on a coverage of
+                                            <span id="mitresquireperlitre">12</span>m² per litre of paint. Always
+                                            check the coverage on the side
+                                            of the tin before buying.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" class="btn-block ebtn" id="estimate-btn">Get Estimate Now</button>
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" class="btn-block ebtn-r" id="estimate-reset-btn">Reset Estimate</button>
+                                </div>
+                            </form>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="service-area">
+        <div class="container">
+            <div class="row">
+                <h1 class="wow zoomIn" data-wow-delay=".5s">Our Blog</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="blog-one wow fadeInUp" data-wow-delay=".5s">
+                        <div class="bo-hover-content">
+                            <span class="flaticon-art-1 ficon-blg"></span>
+                        </div>
+                        <h3>Painting is an illusion, a
+                            piece of magic, so what
+                            you see is not.</h3>
+                        <div class="blg-meta">
+                            <ul>
+                                <li>Posted: 04th April, 2019</li>
+                                <li>Tag: Paint , ainting</li>
+                            </ul>
+                        </div>
+                        <p>Do activities you passionate about which
+                            make your heart and soul perky including
+                            things like working out cooking, painting
+                            writing, yoga, hiking, walking.</p>
+                        <div class="btn-learn-2">
+                            <span class="learn-li"><a href="blog-details.html">Learn More</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-one wow fadeInUp" data-wow-delay="1s">
+                        <div class="bo-hover-content">
+                            <span class="flaticon-art-1 ficon-blg"></span>
+                        </div>
+                        <h3>Painting is a blind man
+                            profession. He paints
+                            not what he sees.</h3>
+                        <div class="blg-meta">
+                            <ul>
+                                <li>Posted: 04th April, 2019</li>
+                                <li>Tag: Paint , ainting</li>
+                            </ul>
+                        </div>
+                        <p>Blind man profession. He paints what he
+                            sees, but what he feels, what he tells
+                            himself about what he has seen painting
+                            Do activities you passionate about.</p>
+                        <div class="btn-learn-2">
+                            <span class="learn-li"><a href="blog-details.html">Learn More</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-one wow fadeInUp" data-wow-delay="1.5s">
+                        <div class="bo-hover-content">
+                            <span class="flaticon-art-1 ficon-blg"></span>
+                        </div>
+                        <h3>Man's profession paints
+                            not what he sees, but
+                            what he feel what tell.</h3>
+                        <div class="blg-meta">
+                            <ul>
+                                <li>Posted: 04th April, 2019</li>
+                                <li>Tag: Paint , ainting</li>
+                            </ul>
+                        </div>
+                        <p>Blind man profession. He paint not what
+                            he sees, but what he feels, what he tells
+                            himself about what he has seen. Do
+                            activities passionate about which make.</p>
+                        <div class="btn-learn-2">
+                            <span class="learn-li"><a href="blog-details.html">Learn More</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-two wow fadeInUp" data-wow-delay=".5s">
+                        <img src="{% static 'testapp/assets/images/project/Ap-4.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-one wow fadeInUp" data-wow-delay="1s">
+                        <div class="bo-hover-content">
+                            <span class="flaticon-art-1 ficon-blg"></span>
+                        </div>
+                        <h3>Painting is an illusion, a
+                            piece of magic, so what
+                            you see is not.</h3>
+                        <div class="blg-meta">
+                            <ul>
+                                <li>Posted: 04th April, 2019</li>
+                                <li>Tag: Paint , ainting</li>
+                            </ul>
+                        </div>
+                        <p>Do activities you passionate about which
+                            make your heart and soul perky including
+                            things like working out cooking, painting
+                            writing, yoga, hiking, walking.</p>
+                        <div class="btn-learn-2">
+                            <span class="learn-li"><a href="blog-details.html">Learn More</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-one wow fadeInUp" data-wow-delay="1.5s">
+                        <div class="bo-hover-content">
+                            <span class="flaticon-art-1 ficon-blg"></span>
+                        </div>
+                        <h3>Man's profession paints
+                            not what he sees, but
+                            what he feel what tell.</h3>
+                        <div class="blg-meta">
+                            <ul>
+                                <li>Posted: 04th April, 2019</li>
+                                <li>Tag: Paint , ainting</li>
+                            </ul>
+                        </div>
+                        <p>Blind man profession. He paint not what
+                            he sees, but what he feels, what he tells
+                            himself about what he has seen. Do
+                            activities passionate about which make.</p>
+                        <div class="btn-learn-2">
+                            <span class="learn-li"><a href="blog-details.html">Learn More</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-one wow fadeInUp" data-wow-delay=".5s">
+                        <div class="bo-hover-content">
+                            <span class="flaticon-art-1 ficon-blg"></span>
+                        </div>
+                        <h3>Painting is an illusion, a
+                            piece of magic, so what
+                            you see is not.</h3>
+                        <div class="blg-meta">
+                            <ul>
+                                <li>Posted: 04th April, 2019</li>
+                                <li>Tag: Paint , ainting</li>
+                            </ul>
+                        </div>
+                        <p>Do activities you passionate about which
+                            make your heart and soul perky including
+                            things like working out cooking, painting
+                            writing, yoga, hiking, walking.</p>
+                        <div class="btn-learn-2">
+                            <span class="learn-li"><a href="blog-details.html">Learn More</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-one wow fadeInUp" data-wow-delay="1s">
+                        <div class="bo-hover-content">
+                            <span class="flaticon-art-1 ficon-blg"></span>
+                        </div>
+                        <h3>Painting is a blind man
+                            profession. He paints
+                            not what he sees.</h3>
+                        <div class="blg-meta">
+                            <ul>
+                                <li>Posted: 04th April, 2019</li>
+                                <li>Tag: Paint , ainting</li>
+                            </ul>
+                        </div>
+                        <p>Blind man profession. He paints what he
+                            sees, but what he feels, what he tells
+                            himself about what he has seen painting
+                            Do activities you passionate about.</p>
+                        <div class="btn-learn-2">
+                            <span class="learn-li"><a href="blog-details.html">Learn More</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-one wow fadeInUp" data-wow-delay="1.5s">
+                        <div class="bo-hover-content">
+                            <span class="flaticon-art-1 ficon-blg"></span>
+                        </div>
+                        <h3>Man's profession paints
+                            not what he sees, but
+                            what he feel what tell.</h3>
+                        <div class="blg-meta">
+                            <ul>
+                                <li>Posted: 04th April, 2019</li>
+                                <li>Tag: Paint , ainting</li>
+                            </ul>
+                        </div>
+                        <p>Blind man profession. He paint not what
+                            he sees, but what he feels, what he tells
+                            himself about what he has seen. Do
+                            activities passionate about which make.</p>
+                        <div class="btn-learn-2">
+                            <span class="learn-li"><a href="blog-details.html">Learn More</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-two wow fadeInUp" data-wow-delay=".5s">
+                        <img src="{% static 'testapp/assets/images/portfolio/Blog-Main.jpg' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-one wow fadeInUp" data-wow-delay="1s">
+                        <div class="bo-hover-content">
+                            <span class="flaticon-art-1 ficon-blg"></span>
+                        </div>
+                        <h3>Painting is an illusion, a
+                            piece of magic, so what
+                            you see is not.</h3>
+                        <div class="blg-meta">
+                            <ul>
+                                <li>Posted: 04th April, 2019</li>
+                                <li>Tag: Paint , ainting</li>
+                            </ul>
+                        </div>
+                        <p>Do activities you passionate about which
+                            make your heart and soul perky including
+                            things like working out cooking, painting
+                            writing, yoga, hiking, walking.</p>
+                        <div class="btn-learn-2">
+                            <span class="learn-li"><a href="blog-details.html">Learn More</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-one wow fadeInUp" data-wow-delay="1.5s">
+                        <div class="bo-hover-content">
+                            <span class="flaticon-art-1 ficon-blg"></span>
+                        </div>
+                        <h3>Man's profession paints
+                            not what he sees, but
+                            what he feel what tell.</h3>
+                        <div class="blg-meta">
+                            <ul>
+                                <li>Posted: 04th April, 2019</li>
+                                <li>Tag: Paint , ainting</li>
+                            </ul>
+                        </div>
+                        <p>Blind man profession. He paint not what
+                            he sees, but what he feels, what he tells
+                            himself about what he has seen. Do
+                            activities passionate about which make.</p>
+                        <div class="btn-learn-2">
+                            <span class="learn-li"><a href="blog-details.html">Learn More</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include "testapp/footer-section.html" %}
+{% endblock content %}

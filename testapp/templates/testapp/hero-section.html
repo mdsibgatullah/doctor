@@ -1,0 +1,99 @@
+{% load static %}
+    <section class="hero-area-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="card estimate-card">
+                        <span class="flaticon-paint esc-paint"></span>
+                        <h2>Get An Estimate</h2>
+                        <article class="card-body">
+                            <form>
+                                <span class="e-ctl"> 1. What are the wall dimensions?</span>
+                                <div class="form-row pt-2">
+                                    <div class="col form-group">
+                                        <label>Height (m) </label>
+                                        <input type="text" class="form-control" placeholder="0.00" id="wd-height" required>
+                                    </div>
+                                    <div class="col form-group">
+                                        <label>Width (m)</label>
+                                        <input type="text" class="form-control" placeholder="0.00" id="wd-width" required>
+                                    </div>
+                                </div>
+                                <span class="e-ctl">2. What are the dimensions of the windows/areas
+                                    that you don't want to cover in metres?</span>
+                                <div class="form-row pt-2">
+                                    <div class="form-group col">
+                                        <label>Height (m)</label>
+                                        <input type="text" class="form-control" placeholder="0.00" id="wnd-height" value="00.00">
+                                    </div>
+                                    <div class="form-group col">
+                                        <label>Width (m)</label>
+                                        <input type="text" class="form-control" placeholder="0.00" id="wnd-width" value="00.00">
+                                    </div>
+                                </div>
+                                <span class="e-ctl">3. What are the dimensions of the doors
+                                    that you don't want to cover in metres?</span>
+                                <div class="form-row pt-2">
+                                    <div class="form-group col">
+                                        <label>Height (m)</label>
+                                        <input type="text" class="form-control" placeholder="0" id="doord-height" value="00.00">
+                                    </div>
+                                    <div class="form-group col">
+                                        <label>Width (m)</label>
+                                        <input type="text" class="form-control" placeholder="0" id="doord-width" value="00.00">
+                                    </div>
+                                </div>
+                                <span class="e-ctl">4. How many coats of paint do you want?</span>
+                                <div class="form-group p-2">
+                                    <label class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="coat-qty-check" value="1" checked>
+                                        <span class="form-check-label"> 1 coat</span>
+                                    </label>
+                                    <label class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="coat-qty-check" value="2">
+                                        <span class="form-check-label"> 2 coat</span>
+                                    </label>
+                                    <label class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="coat-qty-check" value="3">
+                                        <span class="form-check-label"> 3 coat</span>
+                                    </label>
+                                </div>
+                                <div class="e-result">
+                                    <div class="e-tottle">
+                                        <h3 id="litre-result">00.00</h3>
+                                        <span>litres of paint</span>
+                                    </div>
+                                    <div class="er-text">
+                                        <p>This is based on a coverage of
+                                            <span id="mitresquireperlitre">12</span>m² per litre of paint. Always
+                                            check the coverage on the side
+                                            of the tin before buying.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" class="btn-block ebtn" id="estimate-btn">Get Estimate Now</button>
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" class="btn-block ebtn-r" id="estimate-reset-btn">Reset Estimate</button>
+                                </div>
+                            </form>
+                        </article>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="hero-content-1">
+                        <h1 class="wow fadeInLeft" data-wow-delay=".5s">We Really Love to Help You to
+                            Get Your Home Decorated!</h1>
+                        <p class="wow fadeInLeft" data-wow-delay="1s">There no society ever discovered remotest corner
+                            the world
+                            that
+                            has not had something that would consider the arts songs.</p>
+                        <div class="btn-learn">
+                            <span class="learn-ab"><a href="Contact-us.html">Contact Us</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

@@ -1,0 +1,205 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+<title>service | Page</title>
+{% endblock title %}
+
+{% block content %}
+{% include "testapp/preloader.html" %}
+{% include "testapp/header.html" %}
+
+<section class="service-area">
+    <div class="container">
+        <div class="row">
+            <h1 class="wow zoomIn" data-wow-delay=".3s">Our Service</h1>
+        </div>
+    </div>
+</section>
+
+{% include "testapp/service-section.html" %}
+
+<section class="video">
+    <div class="video-overly">
+        <div class="play-icon">
+            <a href="#" data-toggle="modal" data-target="#myModal"><i class="fas fa-play"></i></a>
+        </div>
+    </div>
+
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="button ml-auto" id="pause-button" data-dismiss="modal"><i class="fas fa-times v-close"></i></button>
+                </div>
+
+                <div class="modal-body">
+                    <div id="headerPopup">
+
+                        <iframe id="video" src="https://www.youtube.com/embed/AASd5ewKNSw?enablejsapi=1&amp;html5=1" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="our-snav-item">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="single-service ss-2 wow fadeInUp" data-wow-delay="1s">
+                    <span class="flaticon-paint-1 ficon-bg-2"></span>
+                    <div class="icon-inner">
+                        <span class="flaticon-paint-1"></span>
+                    </div>
+                    <div class="ss-content">
+                        <h3>NEW MAKEOVER</h3>
+                        <p>There is societ ever discovered remotest
+                            corner of the world that has something
+                            that we would consider the arts. Visual
+                            arts - decoration of surfaces and bodies
+                            - appears to be a human universal.</p>
+                        <a href="service-details.html">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="single-service wow fadeInUp" data-wow-delay="1.5s">
+                    <span class="flaticon-paint-roller ficon-bg-3"></span>
+                    <div class="icon-inner">
+                        <span class="flaticon-paint-roller"></span>
+                    </div>
+                    <div class="ss-content">
+                        <h3>REGULAR PAINTING</h3>
+                        <p>A great novel concerned primarily with
+                            the interior lives its characters as they
+                            respond the inconvenient narratives
+                            that fate imposes ono them adaptations
+                            these monumental fictions often fail.</p>
+                        <a href="service-details.html">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="single-service ss-bg-2 wow fadeInUp" data-wow-delay=".5s">
+                    <span class="flaticon-paint ficon-bg-1"></span>
+                    <div class="icon-inner">
+                        <span class="flaticon-paint"></span>
+                    </div>
+                    <div class="ss-content">
+                        <h3>WALL PAINTING</h3>
+                        <p>A great novel concerned primarily with
+                            the interior lives its characters as they
+                            respond the inconvenient narratives
+                            that fate imposes ono them adaptations
+                            these monumental fictions often fail.</p>
+                        <a href="service-details.html">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="project-ask-2" id="es-card">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card estimate-card e-card-2">
+                    <span class="flaticon-paint esc-paint"></span>
+                    <h2>Get An Estimate</h2>
+                    <article class="card-body">
+                        <form>
+                            <span class="e-ctl"> 1. What are the wall dimensions?</span>
+                            <div class="form-row pt-2">
+                                <div class="col form-group">
+                                    <label>Height (m) </label>
+                                    <input type="text" class="form-control" placeholder="0.00" id="wd-height" required>
+                                </div>
+                                <div class="col form-group">
+                                    <label>Width (m)</label>
+                                    <input type="text" class="form-control" placeholder="0.00" id="wd-width" required>
+                                </div>
+                            </div>
+                            <span class="e-ctl">2. What are the dimensions of the windows/areas
+                                that you don't want to cover in metres?</span>
+                            <div class="form-row pt-2">
+                                <div class="form-group col">
+                                    <label>Height (m)</label>
+                                    <input type="text" class="form-control" placeholder="0.00" id="wnd-height" value="00.00">
+                                </div>
+                                <div class="form-group col">
+                                    <label>Width (m)</label>
+                                    <input type="text" class="form-control" placeholder="0.00" id="wnd-width" value="00.00">
+                                </div>
+                            </div>
+                            <span class="e-ctl">3. What are the dimensions of the doors
+                                that you don't want to cover in metres?</span>
+                            <div class="form-row pt-2">
+                                <div class="form-group col">
+                                    <label>Height (m)</label>
+                                    <input type="text" class="form-control" placeholder="0" id="doord-height" value="00.00">
+                                </div>
+                                <div class="form-group col">
+                                    <label>Width (m)</label>
+                                    <input type="text" class="form-control" placeholder="0" id="doord-width" value="00.00">
+                                </div>
+                            </div>
+                            <span class="e-ctl">4. How many coats of paint do you want?</span>
+                            <div class="form-group p-2">
+                                <label class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="coat-qty-check" value="1" checked>
+                                    <span class="form-check-label"> 1 coat</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="coat-qty-check" value="2">
+                                    <span class="form-check-label"> 2 coat</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="coat-qty-check" value="3">
+                                    <span class="form-check-label"> 3 coat</span>
+                                </label>
+                            </div>
+                            <div class="e-result">
+                                <div class="e-tottle">
+                                    <h3 id="litre-result">00.00</h3>
+                                    <span>litres of paint</span>
+                                </div>
+                                <div class="er-text">
+                                    <p>This is based on a coverage of
+                                        <span id="mitresquireperlitre">12</span>m² per litre of paint. Always
+                                        check the coverage on the side
+                                        of the tin before buying.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" class="btn-block ebtn" id="estimate-btn">Get Estimate Now</button>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" class="btn-block ebtn-r" id="estimate-reset-btn">Reset Estimate</button>
+                            </div>
+                        </form>
+                    </article>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="pro-ask-content-2">
+                    <h1 data-aos="slide-in-left">Do You Have Any Project?</h1>
+                    <p>I loved painting and drawing for many reasons. One of them was that all it really required
+                        was me, a
+                        pencil and a pad. It was something I was passionate about, and still am I loved painting.
+                    </p>
+                    <div class="btn-learn wow zoomIn" data-wow-delay=".5s">
+                        <span class="learn-ab"><a href="Contact-us.html">Let's Talk</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include "testapp/footer-section.html" %}
+{% endblock content %}
