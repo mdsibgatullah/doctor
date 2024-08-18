@@ -2,14 +2,30 @@
     <section class="completed-project">
         <div class="container">
             <div class="recent-top">
-                <p>Recent Project</p>
-                <h3>Our Recent Completed Projects</h3>
-                <p>Whereas digital stuff is a bit more ethereal. I like the trophy on my
-                    shelf, the presence in my home nice book is just as valuable.</p>
+                <p>{{project.sub_title}}</p>
+                <h3>{{project.title}}</h3>
+                <p>{{project.description | safe }}</p>
             </div>
             <div class="recent-project">
                 <div class="row">
-                    <div class="col-md-5">
+                    {% for item in project_item %}
+                        <div class="{{ item.media }}">
+                            <div class="project-1">
+                                <img src="{{ item.image.url }}" alt="">
+                                <div class="prj-1-content prj-three">
+                                    <div class="p-icon">
+                                        <span class="flaticon-repair ficon-pj-1 ficon-pj-3"></span>
+                                    </div>
+                                    <h4>{{item.title}}</h4>
+                                    <p>{{item.description | safe }}</p>
+                                    <a href="portfolio-details.html"> Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+
+                    {% comment %} <div class="col-md-5">
                         <div class="prj-1-content">
                             <div class="p-icon">
                                 <span class="flaticon-repair ficon-pj-1"></span>
@@ -99,7 +115,8 @@
                                 <a href="portfolio-details.html"> Learn More</a>
                             </div>
                         </div>
-                    </div>
+                    </div> {% endcomment %}
+
                 </div>
             </div>
         </div>
